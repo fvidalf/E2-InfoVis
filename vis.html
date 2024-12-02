@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Tiny5&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <title>VGVis</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Panorama de los juegos más vendidos</h1>
+
+        <div class="vis-description">
+            <h2>Proporción de ventas de videojuegos por región y género</h2>
+            <p>En este <i>Sunburst Plot</i> el área de cada sector circular es proporcional a las ventas de videojuegos en una región/género. Al hacer click sobre una región, se expande el sector circular correspondiente a los géneros de videojuegos vendidos en esa región.</p>
+            <p>Además, al hacer <i>hover</i> sobre un sector circular, se muestra el número de ventas en millones de unidades.</p>
+        </div>
+        <div class="svg-container" id="vis-1">
+        </div>
+
+        <div class="vis-description">
+            <h2>Relación entre plataformas y ventas por género de videojuego</h2>
+            <p>En este <i>Heatmap</i>, cada casilla representa el número de ventas de videojuegos de un género en una plataforma. En el eje vertical se ubican los géneros registrados, mientras que en el horizontal se ubican las diversas plataformas.</p>
+            <p>El color de cada casilla es proporcional al número de ventas: Mientras más oscuro más ventas, y viceversa.</p>
+            <p>Al hacer <i>hover</i> sobre una casilla, se muestra el número exacto de ventas en millones de unidades.</p>
+        </div>
+        <div class="svg-container" id="vis-2">
+        </div>
+
+        <div class="vis-description">
+            <h2>Videojuegos individuales según su número de ventas</h2>
+            <p>En este <i>Bubble Chart</i> se muestra el número de ventas de videojuegos individuales en millones de unidades. El tamaño (área) de cada burbuja es proporcional a las ventas del videojuego.</p>
+            <p>Al hacer <i>hover</i> sobre una burbuja, se muestra el nombre, plataforma y número de ventas en millones de unidades para una mejor visualización.</p>
+            <p>El <i>slider</i> de abajo permite modificar el número de burbujas renderizadas. El valor por defecto es de 25.</p>
+
+            <label for="numBubbles">Número de burbujas</label>
+            <input type="range" id="numBubbles" name="numBubbles" min="1" max="300" value="25">
+        </div>
+        <div class="svg-container" id="vis-3">
+        </div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

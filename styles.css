@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: "Play", sans-serif;
+    overflow-clip: auto;
+}
+
+p {
+    text-align: justify;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: auto;
+    gap: 10px;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 33.33%;
+    background-color: #040f0f;
+    z-index: -1;
+}
+
+.container h1 {
+    margin: 10px;
+    color: white;
+}
+
+.container div.vis-description {
+    margin: 10px;
+    grid-column: 1;
+    color: white;
+}
+
+.container div {
+    grid-column: 2;
+}
+
+#vis-1, #vis-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
